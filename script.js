@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             src: 'images/ceramica1.jpg',
             alt: 'Vaso de cerâmica azul',
-            title: 'Vaso Azul Marinho',
-            description: 'Vaso decorativo com acabamento em esmalte azul profundo'
+            title: 'Cactus',
+            description: 'Dupla de cactus esmaltados em tons de verde e flor em vermelho'
         },
         {
             src: 'images/ceramica2.jpg',
@@ -16,20 +16,20 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             src: 'images/ceramica3.jpg',
             alt: 'Tigelas decorativas',
-            title: 'Tigelas Decorativas',
-            description: 'Conjunto de tigelas para servir em cores variadas'
+            title: 'Porta guardanapos',
+            description: 'Conjunto de porta guardanapos em cerâmica e cizal',
         },
         {
             src: 'images/ceramica4.jpg',
             alt: 'Xícaras de cerâmica',
-            title: 'Xícaras Artesanais',
-            description: 'Conjunto de xícaras com detalhes feitos à mão'
+            title: 'Bowl com crochê',
+            description: 'Linha de bowls com crochê colorido',
         },
         {
             src: 'images/ceramica5.jpg',
             alt: 'Vasos decorativos pequenos',
-            title: 'Mini Vasos',
-            description: 'Conjunto de mini vasos perfeitos para suculentas'
+            title: 'Dupla de bowls',
+            description: 'Conjunto de bowls perfeitos para decorar sua mesa',
         }
     ];
 
@@ -138,24 +138,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.carousel-container').addEventListener('mouseenter', stopAutoSlide);
     document.querySelector('.carousel-container').addEventListener('mouseleave', startAutoSlide);
 
-    // Processamento do formulário de contato
-    const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Dados do formulário
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Aqui você adicionaria código para enviar os dados do formulário
-            // Como exemplo, apenas mostramos um alerta
-            alert(`Obrigado ${name}! Sua mensagem foi recebida. Entraremos em contato pelo email ${email} em breve.`);
-            
-            // Limpar formulário
-            contactForm.reset();
+    // Código para rastreamento de cliques no botão de formulário (opcional)
+    const formButton = document.querySelector('.google-form-container .btn');
+    if (formButton) {
+        formButton.addEventListener('click', function() {
+            console.log('Usuário clicou no link do formulário de contato');
+            // Aqui você pode adicionar código para analytics se desejar
         });
     }
 });
